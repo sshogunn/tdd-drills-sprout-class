@@ -10,6 +10,9 @@ public class ReportGenerator {
         throw new ComplexInitiationInATestException("Sometimes we have to deal with classes that are quite difficult to create");
     }
 
+    /**
+     * Goal -> add header in the table <tr><td>Department</td><td>Manager</td><td>Profit</td><td>Expenses</td></tr>
+     */
     String build(Date beginDate, Date endDate) {
         DepartmentCollection results = new DatabaseGateway().queryResults(beginDate, endDate);
         String pageText = "";
